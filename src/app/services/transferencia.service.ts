@@ -8,17 +8,18 @@ export class TransferenciaService {
   constructor() {
     this.listaTransferencia = [];
   }
+
   get transferencias() {
     return this.listaTransferencia;
   }
 
-  adicionar(transferencia: any) {
-    this.hidratar(transferencia);
+  adicionarTransferencia(transferencia: any) {
+    this.adicionarData(transferencia);
 
     this.listaTransferencia.push(transferencia);
   }
 
-  private hidratar(transferencia: any) {
+  private adicionarData(transferencia: any) {
     transferencia.data = new Date();
   }
 }

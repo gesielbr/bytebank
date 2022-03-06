@@ -11,7 +11,13 @@
       <td class="tabela__conteudo">{{ transferencia.destino }}</td>
     </tr>
   </tbody>
+  <ng-template #listavazia>
+    <tbody>
+      <tr class="tabela__linha">
+        <td colspan="3" class="tabela__conteudo">
+          Nenhuma transferência cadastrada
+        </td>
+      </tr>
+    </tbody>
+  </ng-template>
 </table>
-<ng-template #listavazia>
-  <p class="text-center">Nenhuma operação cadastrada</p>
-</ng-template>
